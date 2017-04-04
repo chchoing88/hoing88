@@ -1,0 +1,15 @@
+get('topic') : view.jade
+get('topic/:id') : view.jade
+get('topic/add') : add.jade
+   //제출
+   post('topic/add') // db에 inert 후 redirect...
+   get('topic/:id') // redirect..
+
+get('topic/:id/edit) : edit.jade
+   post('topic/:id/edit') // db에 update 후 redirect...
+   get('topci/:id')
+
+get('topic/:id/delete') : delete.jade
+   post('topic/:id/delete') // db에 delete 후 redirect...
+   get('topci/')
+
