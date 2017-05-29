@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="speColl">
+    ... 생략 ...
+    <#-- 탭 -->
+        <div class="tab_fix">
+            <ul class="list_tab tab_size3 _spe_tab"> <#-- 탭 ul 요소의 '_spe_tab' 클래스 추가 -->
+                <li><a href="javascript:;" class="tab_tit">탭1</a></li>
+                <li><a href="javascript:;" class="tab_tit">탭2</a></li>
+                <li><a href="javascript:;" class="tab_tit">탭3</a></li>
+            </ul>
+        </div>
+        <div class="tab_fix tab_sub">
+            <#-- 탭1 > 서브탭 -->
+                <ul class="list_tab tab_size3 _spe_tab_sub" data-tab1="0"> <#-- 서브탭 ul 요소의 '_spe_tab_sub' 클래스 추가 -->
+                    <li><a href="javascript:;" class="tab_tit"><span class="inner_tit">탭메뉴1</span></a></li>
+                    <li><a href="javascript:;" class="tab_tit"><span class="inner_tit">탭메뉴2</span></a></li>
+                </ul>
+                <#-- 탭2 > 서브탭 -->
+                    <ul class="list_tab tab_size3 _spe_tab_sub" data-tab1="1"> <#-- 서브탭 ul 요소의 '_spe_tab_sub' 클래스 추가 -->
+                        <li><a href="javascript:;" class="tab_tit"><span class="inner_tit">탭메뉴1</span></a></li>
+                        <li><a href="javascript:;" class="tab_tit"><span class="inner_tit">탭메뉴2</span></a></li>
+                        <li><a href="javascript:;" class="tab_tit"><span class="inner_tit">탭메뉴3</span></a></li>
+                    </ul>
+        </div>
+        <#-- 스와이프 -->
+            <div class="flipsnap_view">
+                <div class="flipsnap">
+                    <div class="flipsnap_item" data-tab1="0" data-tab2="0"> <#-- data-tab1="메인탭인덱스" data-tab2="서브탭인덱스" 추가 -->
+                        <div class="flipsnap_wrap" data-morelink="http://m.daum.net">
+                            탭 1 > 서브탭 1 - 영역 1번
+                        </div>
+                    </div>
+                    <div class="flipsnap_item" data-tab1="0" data-tab2="0"> <#-- data-tab1="메인탭인덱스" data-tab2="서브탭인덱스" 추가 -->
+                        <div class="flipsnap_wrap">
+                            탭 1 > 서브탭 1 - 영역 2번
+                        </div>
+                    </div>
+                    <div class="flipsnap_item" data-tab1="0" data-tab2="0"> <#-- data-tab1="메인탭인덱스" data-tab2="서브탭인덱스" 추가 -->
+                        <div class="flipsnap_wrap">
+                            탭 1 > 서브탭 1 - 영역 3번
+                        </div>
+                    </div>
+                    <div class="flipsnap_item" data-tab1="0" data-tab2="1"> <#-- data-tab1="메인탭인덱스" data-tab2="서브탭인덱스" 추가 -->
+                        <div class="flipsnap_wrap">
+                            탭 1 > 서브탭 2 - 영역 1번
+                        </div>
+                    </div>
+                    <div class="flipsnap_item" data-tab1="0" data-tab2="1"> <#-- data-tab1="메인탭인덱스" data-tab2="서브탭인덱스" 추가 -->
+                        <div class="flipsnap_wrap">
+                            탭 1 > 서브탭 2 - 영역 2번
+                        </div>
+                    </div>
+                    <div class="flipsnap_item" data-tab1="1" data-tab2="0"> <#-- data-tab1="메인탭인덱스" data-tab2="서브탭인덱스" 추가 -->
+                        <div class="flipsnap_wrap">
+                            탭 2 > 서브탭 1 - 영역 1번
+                        </div>
+                    </div>
+                    <div class="flipsnap_item" data-tab1="1" data-tab2="1"> <#-- data-tab1="메인탭인덱스" data-tab2="서브탭인덱스" 추가 -->
+                        <div class="flipsnap_wrap">
+                            탭 2 > 서브탭 2 - 영역 2번
+                        </div>
+                    </div>
+                    <div class="flipsnap_item" data-tab1="1" data-tab2="2"> <#-- data-tab1="메인탭인덱스" data-tab2="서브탭인덱스" 추가 -->
+                        <div class="flipsnap_wrap">
+                            탭 2 > 서브탭 3 - 영역 3번
+                        </div>
+                    </div>
+                    <div class="flipsnap_item" data-tab1="2"> <#-- data-tab1="메인탭인덱스" - 서브탭이 없는경우 data-tab2 미기입 -->
+                        <div class="flipsnap_wrap">
+                            탭 3 > 서브탭 x - 영역 1번
+                        </div>
+                    </div>
+                    <div class="flipsnap_item" data-tab1="2"> <#-- data-tab1="메인탭인덱스" - 서브탭이 없는경우 data-tab2 미기입 -->
+                        <div class="flipsnap_wrap">
+                            탭 3 > 서브탭 x - 영역 2번
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <#-- 페이징 -->
+                <div class="extend_comp extend_comp2">
+                    <div class="extender extend_more">
+                        <div class="extend_paging">
+                            <div class="list_dot _spe_paging"></div> <#-- 페이징 : _spe_paging 추가 -->
+                        </div>
+                    </div>
+                </div>
+                ... 생략 ...
+</div>
+</body>
+</html>

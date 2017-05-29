@@ -6,21 +6,23 @@ var express = require('express');
 var cookieParser = require('cookie-parser');
 var app = express();
 
-app.use(cookieParser());
+app.use(cookieParser('123124124123aszs2r12'));
+
 var products = {
     1:{title:'The history of web 1'},
     2:{title:'The next web'}
 };
+
 // req : 요청이 들어오는거
 // res : 요청을 내보내는거
 app.get('/count',function(req,res){
-    if(req.cookies.count){
+    if(req.signedCookies.count){
         var count = parseInt(req.cookies.count);
     } else {
         var count = 0;
     }
     count = count + 1;
-    res.cookie('count',count);
+    res.cookie('count',count,{signed:true});
     res.send('count : '+count);
 });
 
@@ -39,8 +41,8 @@ app.get('/products',function(req,res){
 
 app.get('/cart/:id',function(req,res){
     var id = req.params.id;
-    if(req.cookies.cart){
-        var cart = req.cookies.cart;
+    if(req.signedCookies.cart){
+        var cart = req.signedCookies.cart;
     } else{
         var cart = {};
     }
@@ -48,12 +50,12 @@ app.get('/cart/:id',function(req,res){
         cart[id] = 0;
     }
     cart[id] = parseInt(cart[id])+1;
-    res.cookie('cart',cart);
+    res.cookie('cart',cart,{signed:true});
     res.redirect('/cart');
 });
 
 app.get('/cart',function(req , res){
-    var cart = req.cookies.cart;
+    var cart = req.signedCookies.cart;
     if(!cart){
         res.send('empty');
     } else{

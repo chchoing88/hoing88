@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="speColl">
+
+    <div class="tab_fix tab_main">
+        <ul class="list_tab tab_size2">
+            <li class="on">
+                <a href="javascript:;" class="tab_tit">장소별 행동요령</a>
+            </li>
+            <li>
+                <a href="javascript:;" class="tab_tit">상황별 행동요령</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="tab_fix tab_sub">
+        <ul class="list_tab tab_size3" data-tab1="1">
+            <li>
+                <a href="javascript:;" class="tab_tit"><span class="inner_tit">장소별 행동요령</span></a>
+            </li>
+            <li>
+                <a href="javascript:;" class="tab_tit"><span class="inner_tit">상황별 행동요령1</span></a>
+            </li>
+            <li>
+                <a href="javascript:;" class="tab_tit"><span class="inner_tit">상황별 행동요령2</span></a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="viewport">
+        <div class="flipsnap">
+            <div class="item" data-tab1="0">1</div>
+            <div class="item" data-tab1="1" data-tab2="0">2</div>
+            <div class="item" data-tab1="1" data-tab2="1">3</div>
+            <div class="item" data-tab1="1" data-tab2="2">4</div>
+        </div>
+    </div>
+
+</div>
+
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    <script src="flipsnap.js"></script>
+    <script src="flipsnapTab.js"></script>
+
+    <script>
+        //Flipsnap('.flipsnap');
+        var a = FlipsnapTab();
+
+    </script>
+</body>
+</html>
+
+
