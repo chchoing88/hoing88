@@ -12,7 +12,10 @@ var sourcemaps = require('gulp-sourcemaps'), // sourcemaps 호출
   sassGrapher = require('gulp-sass-grapher'),
   sassGraph = require('gulp-sass-graph'),
   path = require('path'),
-  sassGraph = require('sass-graph');
+  sassGraph = require('sass-graph'),
+  gutil = require('gulp-util');
+var vinylPaths = require('vinyl-paths');
+
 
 
 
@@ -53,3 +56,21 @@ gulp.task('default',function(){
   console.log(sassGraph.parseDir('src/scss').index['/Users/merlin.ho/hoing88/gulpTest/src/scss/test1.scss'].importedBy)
   console.log(sassGraph.parseFile('/Users/merlin.ho/hoing88/gulpTest/src/scss/test1.scss'))
 });
+
+var filePath = [];
+// 파일명 알아오기...
+gulp.task('diff',function(){
+  //gutil.log('stuff happened', 'Really it did', gutil.colors.magenta('123'));
+  return gulp.src('./src/css/**/*.css')
+    .pipe(vinylPaths(function (paths) {
+      //console.log('Paths:', paths);
+      filePath.push(paths);
+      return Promise.resolve();
+    }))
+    .pipe(gulp.dest(''))
+    .on('end',function(){
+      console.log(filePath);
+    });
+
+});
+
