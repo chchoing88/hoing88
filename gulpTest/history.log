@@ -1,0 +1,2 @@
+src/css/test3.css
+{+.test{margin:10px;}+}
