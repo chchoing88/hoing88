@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Contact from './Contact';
 
 
-class App extends React.Component{
+class App extends Component {
+  state = {
 
-  render(){
+  }
+
+  render() {
     return (
-      <Contact/>
+      <Contact />
     );
   }
 }
