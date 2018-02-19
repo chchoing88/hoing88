@@ -1,6 +1,4 @@
-/**
- * Created by merlin.ho on 2017. 9. 16..
- */
+/* eslint-disable */
 var webpack = require('webpack');
 
 module.exports = {
