@@ -1,3 +1,10 @@
-/**
- * Created by merlin.ho on 2017. 9. 17..
- */
+import React from 'react';
+
+export default class ContactInfo extends React.Component{
+
+  render(){
+    return (
+      <div onClick={this.props.onClick}>{this.props.contact.name}</div>
+    )
+  }
+}

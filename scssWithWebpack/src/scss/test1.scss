@@ -1,0 +1,8 @@
+@import "./folder1/folder1_test1.scss";
+.test1{margin-top:4000px;
+    .test1_nest{padding: 130px;}
+    .test1_post{display:flex;width:101px;}
+}
+.empty{ color:red;font-family: 'Malgun Gothic','맑은 고딕',sans-serif;padding:30px;}
+h1{color:blue;}
+h2{overflow:hidden;display:block;font-size:15px;}

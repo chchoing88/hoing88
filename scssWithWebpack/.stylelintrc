@@ -1,0 +1,41 @@
+{
+    "plugins": [
+        "stylelint-order"
+    ],
+  "rules": {
+    "block-no-empty": true,
+    "selector-pseudo-class-no-unknown":true,
+    "color-no-invalid-hex": true,
+    "color-hex-length": "short",
+    "font-family-no-duplicate-names":true,
+    "comment-empty-line-before": [ "always", {
+      "ignore": ["stylelint-commands", "after-comment"]
+    } ],
+    "indentation": ["tab", {
+      "except": ["value"]
+    }],
+    "rule-empty-line-before": "never",
+    
+    "order/properties-order": [
+            "display",
+            "overflow",
+            "float",
+            "position",
+            "z-index",
+            "width",
+            "height",
+            "margin",
+            "margin-top",
+            "margin-right",
+            "margin-bottom",
+            "margin-left",
+            "padding",
+            "padding-top",
+            "padding-right",
+            "padding-bottom",
+            "padding-left",
+            
+
+        ],
+   }
+}

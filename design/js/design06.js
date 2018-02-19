@@ -41,5 +41,16 @@ var PraetorianProxy = (function(){
 })();
 
 var praetorian = new PraetorianProxy('otho');
+
 praetorian.report('ho');
 praetorian.assassinate('otho');
+
+// 원래대로 한다면 
+// 황제에게 ho 를 보고 드립니다.
+// otho 암살명령을 받았습니다.
+
+// 프록시 거치면.
+// otho 에게 ho를 보고 드립니다.
+// 황제에게 거짓을 보고드립니다.
+// 더이상 otho 암살을 하지 않습니다.
+// 갈바를 암살명령을 받았습니다.

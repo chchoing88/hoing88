@@ -36,8 +36,6 @@ describe('Aop',function(){
   describe('Aop.around(fnName, advice, targetObj)',function(){
 
     it('타깃 함수를 해당 객체의 콘텍스트에서 실행한다.',function(){
-
-
       var targetInstance = new Target();
       var spyOnInstance = spyOn(targetInstance,'targetFn').and.callThrough();
       Aop.around('targetFn',argPassingAdvice,targetInstance);

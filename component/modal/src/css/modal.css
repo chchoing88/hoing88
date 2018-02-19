@@ -1,0 +1,13 @@
+
+#modalWrap .modal_dimmed{display:none;position:fixed;left:0;right:0;top:0;bottom:0;background-color:rgba(0,0,0,0.4);}
+
+#modalWrap .inner_modal{position:fixed;left:50%;margin-left:-150px;width:300px;height:200px;background-color:pink;border:1px solid #919191;border-radius:20px;text-align:center;}
+#modalWrap .inner_modal .tit_merlin{display:block;padding:20px;}
+
+#modalWrap .btn_close{ position:absolute;right:10px;top:10px;}
+
+#modalWrap .inner_smodal{position:fixed;left:50%;margin-left:-100px;top:-100px;width:200px;height:100px;background-color:pink;text-align:center;transition:all 0.5s ease-in-out;}
+#modalWrap .top_to_bottom .inner_smodal{top:200px;}
+
+.test{background:url("aaa.png")}
+

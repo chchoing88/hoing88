@@ -1,0 +1,1 @@
+function function02(){console.log("this is fn02")}function function01(n,o){console.log("this is fn01")}function02(),function01(1,2);

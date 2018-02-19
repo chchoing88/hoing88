@@ -1,0 +1,25 @@
+{
+  "name": "gulp_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "fs-extra": "^3.0.1",
+    "gulp": "^3.9.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-dependencies": "^0.1.1",
+    "gulp-sass-graph": "^1.0.0",
+    "gulp-sass-grapher": "^0.1.4",
+    "gulp-sass-inheritance": "^0.5.1",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "path": "^0.12.7",
+    "sass-graph": "^2.2.3",
+    "vinyl-paths": "^2.1.0"
+  }
+}

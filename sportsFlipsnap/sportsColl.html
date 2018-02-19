@@ -1,10 +1,699 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+  <title>Title</title>
+  <style>
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button {
+      margin: 0;
+      padding: 0
+      }
+
+    fieldset,img {
+      border: 0 none
+      }
+
+    dl,ul,ol,menu,li {
+      list-style: none
+      }
+
+    blockquote,q {
+      quotes: none
+      }
+
+    blockquote:before,blockquote:after {
+      content: '';
+      content: none
+      }
+
+    q:before,q:after {
+      content: '';
+      content: none
+      }
+
+    input,select,textarea,button {
+      vertical-align: middle;
+      font-size: 100%
+      }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0
+      }
+
+    body {
+      -webkit-text-size-adjust: none
+      }
+
+    input[type='button'],input[type='email'],input[type='password'],input[type='reset'],input[type='search'],input[type='submit'],input[type='tel'],input[type='text'] {
+      -webkit-appearance: none;
+      border-radius: 0
+      }
+
+    input[type='search']::-webkit-search-cancel-button,input[type='search']::-webkit-search-decoration {
+      -webkit-appearance: none
+      }
+
+    input:checked[type='checkbox'] {
+      background-color: #666;
+      -webkit-appearance: checkbox
+      }
+
+    button {
+      border: 0 none;
+      border-radius: 0;
+      background: transparent;
+      cursor: pointer;
+      -webkit-appearance: button
+      }
+
+    button::-moz-focus-inner {
+      border: 0;
+      padding: 0
+      }
+
+    hr {
+      display: none
+      }
+
+    html,body {
+      background: #fff
+      }
+
+    a {
+      color: #007aff;
+      text-decoration: none
+      }
+
+    address,caption,cite,code,dfn,em,var {
+      font-style: normal;
+      font-weight: normal
+      }
+
+    body,th,td,input,select,textarea,button {
+      font-size: 14px;
+      line-height: 1.5;
+      font-family: 'Malgun Gothic','맑은 고딕',sans-serif;
+      color: #000
+      }
+
+    main {
+      display: block
+      }
+
+    .iphone {
+      font-family: helvetica,AppleSDGothicNeo,sans-serif
+      }
+
+    .iphone b {
+      font-family: AppleSDGothicNeo-Bold;
+      font-weight: normal
+      }
+
+    .iphone th,.iphone td,.iphone input,.iphone select,.iphone textarea,.iphone button {
+      font-family: helvetica,AppleSDGothicNeo,sans-serif
+      }
+
+    .android b {
+      font-weight: bold
+      }
+
+    .firefox button,input {
+      background-image: none
+      }
+
+    img[data-original-src] {
+      background-color: #fff
+      }
+
+    .ir_pm {
+      display: block;
+      overflow: hidden;
+      font-size: 0;
+      line-height: 0;
+      text-indent: -9999px
+      }
+
+    .ir_wa {
+      display: block;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: -1
+      }
+    .flipsnap{display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      width: 100%;
+      min-width: 100%;}
+    .flipsnap_item {
+      float: none;
+      width: 100%;
+      min-width: 100%;
+      }
+    .flipsnap_wrap {
+      overflow: hidden;
+      }
+    #sportsColl .wrap_compare{overflow:hidden;}
+    #sportsColl .list_schedule { overflow: hidden; float: left; width: 17.5%; border-bottom: 1px solid #f0f0f0; border-right: 1px solid #f0f0f0; box-sizing: border-box; }
+    #sportsColl .selected_list { position: relative; z-index: 1; width: 65%; box-shadow: -2px 11px 32px -9px #979797; }
+  </style>
 </head>
 <body>
-$END$
+<div id="sportsColl">
+  <div class="flipsnap_view">
+    <div class="flipsnap comparesnap">
+      <div class="flipsnap_item _active">다른거</div>
+      <div class="flipsnap_item ">
+        <div class="wrap_compare">
+          <ul class="list_schedule selected_list">
+            <!-- 선택시 selected_list 추가 -->
+            <li class="tit_schedule">
+              <em class="txt_date"><span class="txt_addition">11.</span>18</em>
+              <span class="txt_day">금요일</span>
+            </li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+
+          </ul>
+          <ul class="list_schedule ">
+            <li class="tit_schedule">
+              <em class="txt_date"><span class="txt_addition">11.</span>18</em>
+              <span class="txt_day">금요일</span>
+            </li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+          <ul class="list_schedule ">
+            <li class="tit_schedule">
+              <em class="txt_date"><span class="txt_addition">11.</span>18</em>
+              <span class="txt_day">금요일</span>
+            </li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flipsnap_item">
+
+        <div id="wrap_compare1" class="wrap_compare">
+          <ul class="list_schedule selected_list">
+            <!-- 선택시 selected_list 추가 -->
+            <li class="tit_schedule">
+              <em class="txt_date"><span class="txt_addition">11.</span>18</em>
+              <span class="txt_day">금요일</span>
+            </li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+
+          </ul>
+          <ul class="list_schedule ">
+            <li class="tit_schedule">
+              <em class="txt_date"><span class="txt_addition">11.</span>18</em>
+              <span class="txt_day">금요일</span>
+            </li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+          <ul class="list_schedule ">
+            <li class="tit_schedule">
+              <em class="txt_date"><span class="txt_addition">11.</span>18</em>
+              <span class="txt_day">금요일</span>
+            </li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="flipsnap_item">다른거</div>
+
+     <!-- <div class="flipsnap_item">
+
+        <div class="wrap_compare">
+          <ul class="list_schedule selected_list">
+            &lt;!&ndash; 선택시 selected_list 추가 &ndash;&gt;
+            <li class="tit_schedule">
+              <em class="txt_date"><span class="txt_addition">11.</span>18</em>
+              <span class="txt_day">금요일</span>
+            </li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+
+          </ul>
+          <ul class="list_schedule">
+            <li class="tit_schedule">
+              <em class="txt_date"><span class="txt_addition">11.</span>18</em>
+              <span class="txt_day">금요일</span>
+            </li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+          <ul class="list_schedule">
+            <li class="tit_schedule">
+              <em class="txt_date"><span class="txt_addition">11.</span>18</em>
+              <span class="txt_day">금요일</span>
+            </li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="flipsnap_item">
+
+        <div class="wrap_compare">
+          <ul class="list_schedule selected_list">
+            &lt;!&ndash; 선택시 selected_list 추가 &ndash;&gt;
+            <li class="tit_schedule">
+              <em class="txt_date"><span class="txt_addition">11.</span>18</em>
+              <span class="txt_day">금요일</span>
+            </li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+
+          </ul>
+          <ul class="list_schedule">
+            <li class="tit_schedule">
+              <em class="txt_date"><span class="txt_addition">11.</span>18</em>
+              <span class="txt_day">금요일</span>
+            </li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+          <ul class="list_schedule">
+            <li class="tit_schedule">
+              <em class="txt_date"><span class="txt_addition">11.</span>18</em>
+              <span class="txt_day">금요일</span>
+            </li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+        </div>
+
+      </div>-->
+    </div>
+  </div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script src="flipsnap.js"></script>
+<script>
+
+
+  var sportsColl = sportsColl || {};
+  sportsColl.modules = sportsColl.modules || {};
+// 각 탭마다 필요한 모듈을 정리하는 JSON을 만들자...
+  sportsColl.dependenciesTabFunction = {
+    //비교일정..
+    compare : ['compareTab']
+  };
+
+  sportsColl.Aop = {
+      around: function(fnName,advice,fnObj){
+        var originalFn = fnObj[fnName];
+        fnObj[fnName] = function(){
+          return advice.call(this, {fn:originalFn,args:arguments});
+        };
+
+
+
+        //fnObj[fnName] = advice;
+      },
+      next: function(targetInfo){
+        // targetInfo.fn();
+        return targetInfo.fn.apply(this,targetInfo.args);
+      }
+    };
+  sportsColl.widgetSandBox = function(){
+
+   var argsArray = Array.prototype.slice.call(arguments),
+      callback = argsArray.pop(),
+      modules = (argsArray[0] instanceof Array)? argsArray[0] : argsArray;
+
+
+    if(!(this instanceof sportsColl.widgetSandBox)){
+      return new sportsColl.widgetSandBox(modules,callback);
+    }
+
+    modules.forEach(function(toolName){
+      if(!sportsColl.modules.hasOwnProperty(toolName)){
+        return false;
+      }
+
+      sportsColl.modules[toolName](this);
+    },this); // 콜백 내에서 this가 sandbox 인스턴스를 가리키도록 보장한다..
+
+
+    callback(this);
+
+  };
+
+
+  sportsColl.modules.compareTab = function(sandbox){
+    var MAX_WIDTH = 65,
+      MIN_WIDTH = 17.5;
+
+    var self = this,
+      _wrapElements,
+      _listElements,
+      _currentSelectedElement,
+      _currentSelectedIndex,
+      _basePageX,
+      _isAngleOk,
+      _firstTouchPoint,
+      _totalDistX,
+      _directionX = 0,
+      _currentSelectedWidth = MAX_WIDTH,
+      _nextSelectedWidth = MIN_WIDTH;
+
+    function _init(element){
+      _wrapElements = $(element);
+      _listElements = _wrapElements.children('.list_schedule');
+      _currentSelectedElement = _wrapElements.find('.selected_list');
+      _currentSelectedIndex = _currentSelectedElement.index();
+
+      //_wrapElements[0].addEventListener('touchstart',self,false);
+
+    }
+
+    function _getPage(event, page) {
+      return event.changedTouches ? event.changedTouches[0][page] : event[page];
+    }
+    // touchmove 가 적용될때..x값..
+    function _setX(moveX,direction){
+
+
+      var nextSelectedElement;
+      var notSelectedElement;
+
+      if(direction === 'left'){ // 다음께 확장..
+        nextSelectedElement = _currentSelectedElement.next();
+        notSelectedElement = _currentSelectedElement.prev();
+      }else if(direction === 'right'){ // 이전께 확장..
+        nextSelectedElement = _currentSelectedElement.prev();
+        notSelectedElement = _currentSelectedElement.next();
+        moveX = moveX * -1;
+      }
+
+
+
+      if( Math.abs(moveX) === MAX_WIDTH ){
+        _currentSelectedWidth = MAX_WIDTH;
+        _nextSelectedWidth = MIN_WIDTH;
+
+        _currentSelectedElement.addClass('selected_list').css({'width': MAX_WIDTH +'%'}).siblings().removeClass('selected_list').css({'width':MIN_WIDTH+'%'});
+
+
+
+      }else{
+
+        _currentSelectedWidth = (parseFloat(_currentSelectedWidth) + moveX).toFixed(1);
+        _nextSelectedWidth = (parseFloat(_nextSelectedWidth) - moveX).toFixed(1);
+
+        if( _currentSelectedWidth >= MIN_WIDTH && _currentSelectedWidth <= MAX_WIDTH) {
+          _currentSelectedElement.css({'width': _currentSelectedWidth + '%'});
+          nextSelectedElement.css({'width': _nextSelectedWidth + '%'});
+          notSelectedElement.css({'width': '17.5%'});
+
+        }
+      }
+
+    }
+
+    function _hasNext(){
+      if(_currentSelectedElement.next().index() !== -1 ){
+        return true;
+      }
+      return false;
+    }
+
+    function _hasPrev(){
+      if(_currentSelectedElement.prev().index() !== -1 ){
+        return true;
+      }
+      return false;
+    }
+
+    function _moveToTab(index){
+      var destinationElement = _listElements.eq(index);
+      var cssSetting = {
+        'transition-duration':'0.3s',
+        'transition-property' : 'all',
+        'transition-timing-function':'ease-in-out'
+      };
+
+      _listElements.css(cssSetting);
+
+      if(_directionX < 0 ){
+        _currentSelectedElement = destinationElement;
+        _currentSelectedIndex = index;
+        _setX(MAX_WIDTH);
+      }else if(_directionX > 0 ){
+        _currentSelectedElement = destinationElement;
+        _currentSelectedIndex = index;
+        _setX(MAX_WIDTH);
+      }else if(_directionX == 0){
+        _setX(MAX_WIDTH);
+      }
+
+    }
+
+    function _touchMoveTab(moveX,index){
+      // if -2(음수)가 넘어오면 다음꺼 보기위한것 select된 녀석은 2% 빼고 다음껀 2%늘린다..
+      // max 65% , min 17.5%
+      var direction;
+      _listElements.css({'transition-duration':'0s'});
+
+      if( index == 0 ){
+        // 첫번째 탭
+        direction = 'left';
+      }else if(index == 1){
+        // 가운데 탭
+        if(_totalDistX < 0){
+          //처음 터치 이후 계속 왼편에 머무르고 있어요~
+          direction = 'left';
+        }else if(_totalDistX > 0){
+          //처음 터치 이후 계속 오른편에 머무르고 있어요~
+          direction = 'right';
+        }
+      }else if( index == 2){
+        // 마지막 탭
+        direction = 'right';
+      }
+
+      _setX(moveX,direction);
+    }
+
+    function _touchStart(event){
+      // 움직일 준비가 되었는가..
+      // 각도가 범위안에 오면 움직이고 그렇지 않으면 움직이지 않는다...
+      _firstTouchPoint = _basePageX = _getPage(event,'pageX');
+
+      _isAngleOk = false;
+
+     // _wrapElements[0].addEventListener('touchmove',self,false);
+     // _wrapElements[0].addEventListener('touchend',self,false);
+    }
+
+    function _touchMove(event){
+
+      var pageX = _getPage(event, 'pageX'),
+        pageY = _getPage(event, 'pageY'),
+        distX,
+        moveX,
+        viewWidth;
+
+
+      if(_isAngleOk){
+        distX = pageX - _basePageX; // 기존 스타트 x 지점부터 움직이는 x 지점을 뺀다...
+        _totalDistX = pageX - _firstTouchPoint;
+        if(distX == 0){
+          _directionX = 0;
+        }else if( distX < 0 ){
+          _directionX = -1; // left
+          // console.log('left ing');
+        }
+        else if( distX > 0 ){
+          _directionX = 1; // right
+          // console.log('right ing');
+        }
+        viewWidth = window.innerWidth * 0.65;
+        moveX = ((distX / viewWidth * 100)/2);
+        _touchMoveTab(+moveX.toFixed(1),_currentSelectedIndex); // x 축의 값을 셋팅한다...넓이 등등..
+
+      }else{
+        //각도가 충족이 되면..움직일 준비를 하라...
+        if(true){
+          _isAngleOk = true;
+        }
+      }
+
+      _basePageX = pageX;
+
+    }
+
+    function _touchEnd(event){
+
+      var newPoint;
+
+      //_wrapElements[0].removeEventListener('touchmove',self,false);
+      //_wrapElements[0].removeEventListener('touchend',self,false);
+
+      if(_firstTouchPoint !== _basePageX){
+        if(_directionX === 1){
+          newPoint = _currentSelectedElement.prev().index();
+        }else if(_directionX === -1){
+          newPoint = _currentSelectedElement.next().index();
+        }else if(_directionX === 0){
+          newPoint = _currentSelectedElement.index();
+        }
+      }else{
+        newPoint = _currentSelectedElement.index();
+      }
+
+      if( newPoint < 0 ){
+        newPoint = _currentSelectedElement.index();
+      }
+
+      _moveToTab(newPoint);
+
+    }
+
+    function _clickMove(e){
+      var targetDom = e.currentTarget;
+      var point = $(targetDom).parents('.list_schedule').index();
+      _moveToTab(point);
+    }
+
+
+   sandbox.compareTab = {
+     init : _init,
+     setX : _setX,
+     moveToTab : _moveToTab,
+     touchStart : function touchStart(targetInfo){
+       sportsColl.Aop.next.call(this,targetInfo);
+
+       _touchStart(targetInfo.args[0]);
+     },
+     touchMove : function touchMove(targetInfo){
+
+       // 첫번째 탭에서 왼쪽으로 움직이려 하면 플리스냅이 움직여야하고...
+       // 세번째 탭에서 오른쪽으로 움직이려 하면 플리스냅이 움직여야 한다..
+       // 그 외에는 다 compare가 움직이면 된다...
+
+      if(sportsColl.isFlipsnapMove){
+        sportsColl.Aop.next.call(this,targetInfo);
+      }
+        //console.log('b');
+      if(sportsColl.isCompareMove){
+        _touchMove(targetInfo.args[0]);
+      }
+     },
+     touchEnd : function touchEnd(targetInfo){
+
+      sportsColl.Aop.next.call(this,targetInfo);
+      _touchEnd(targetInfo.args[0]);
+     },
+     hasNext : _hasNext,
+     hasPrev : _hasPrev
+   };
+
+  };
+
+  sportsColl.modules.flipsnap = function(sandbox){
+    sandbox.flipsnap = {
+      execute : function(selector){
+        return Flipsnap(selector);
+      }
+    }
+  };
+////////////////////////////////////////////////////////////////////////////////
+
+
+  sportsColl.compare = function(sandbox){
+
+    sandbox.compareTab.init('._active .wrap_compare');
+    sportsColl.Aop.around('_touchStart',sandbox.compareTab.touchStart,sandbox.flipsnap);
+    sportsColl.Aop.around('_touchMove',sandbox.compareTab.touchMove,sandbox.flipsnap);
+    sportsColl.Aop.around('_touchEnd',sandbox.compareTab.touchEnd,sandbox.flipsnap);
+
+  };
+
+  sportsColl.initEvent = function(sandbox){
+
+    sandbox.flipsnap.element.addEventListener('fspointmove',function(ev){
+
+    sandbox.$spe.find('.flipsnap_item').removeClass('_active').eq(sandbox.flipsnap.currentPoint).addClass('_active');
+      // 비교일정이 나오면..
+      var itemWidget = sportsColl.widgetSandBox.call(sandbox,['compareTab'],sportsColl.compare);
+    });
+
+
+    sandbox.flipsnap.element.addEventListener('fstouchstart',function(ev){
+      //itemObject.compareTab.touchStart(ev);
+      console.log('start')
+    });
+    sandbox.flipsnap.element.addEventListener('fstouchmove',function(ev){
+      //itemObject.compareTab.touchMove(ev);
+      console.log('move')
+    });
+    sandbox.flipsnap.element.addEventListener('fstouchend',function(ev){
+      //itemObject.compareTab.touchEnd(ev);
+      console.log('end')
+    });
+
+  };
+
+
+  sportsColl.init = function(sandbox){
+
+    sandbox.flipsnap = sandbox.flipsnap.execute('.flipsnap');
+    sandbox.$spe = $('#sportsColl');
+    //var itemWidget = {};
+
+    sportsColl.initEvent(sandbox);
+
+  };
+
+
+
+  sportsColl.widgetSandBox(['flipsnap'],sportsColl.init);
+
+
+
+
+</script>
+
 </body>
 </html>
+
+

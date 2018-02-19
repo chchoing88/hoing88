@@ -1,0 +1,28 @@
+{
+  "name": "frontenv",
+  "version": "1.0.0",
+  "description": "front env default",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/chchoing88/hoing88.git"
+  },
+  "author": "chchoing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chchoing88/hoing88/frontEnv/issues"
+  },
+  "homepage": "https://github.com/chchoing88/hoing88#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jasmine": "^2.4.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.2",
+    "gulp-webpack": "^1.5.0",
+    "jasmine": "^2.5.3"
+  }
+}

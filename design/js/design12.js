@@ -33,6 +33,8 @@ var ShipStrategy = (function(){
     };
     return ShipStrategy;
 })();
+
+
 var LandStrategy = (function(){
     function LandStrategy(){}
     LandStrategy.prototype.execute = function() {

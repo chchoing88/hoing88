@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>$Title$</title>
+	<title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-$END$
+
+	<div class="merlin_slider">
+		<ul class="slider slider_custom">
+			<li class="slider_item slider_item1">첫번째 슬라이드</li>
+			<li class="slider_item slider_item2">두번째 슬라이드</li>
+			<li class="slider_item slider_item3">세번째 슬리아드</li>
+		</ul>
+
+		<div class="slider_btns">
+			<button class="btn_prev">이전</button>
+			<button class="btn_next">다음</button>
+		</div>
+	</div>
+
 </body>
 </html>

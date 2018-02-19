@@ -1,3 +1,14 @@
-/**
- * Created by merlin.ho on 2017. 9. 16..
- */
+import React from 'react';
+import Contact from './Contact';
+
+
+class App extends React.Component{
+
+  render(){
+    return (
+      <Contact/>
+    );
+  }
+}
+
+export default App;

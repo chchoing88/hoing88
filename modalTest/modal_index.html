@@ -1,10 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>$Title$</title>
+	<title>Modal</title>
+	<style>
+		/*visibility , opacity*/
+		#modalWrap .modal_dimmed{display:none;position:fixed;z-index:1000;left:0;right:0;top:0;bottom:0;background-color:rgba(0,0,0,0.4);}
+
+		#modalWrap .inner_modal{overflow:hidden;position:fixed;left:50%;margin-left:-150px;width:300px;height:200px;background-color:pink;border:1px solid #919191;border-radius:20px;text-align:center;}
+		#modalWrap .inner_modal .tit_merlin{display:block;padding:20px;}
+
+		#modalWrap .btn_close{ position:absolute;right:10px;top:10px;}
+
+		#modalWrap .inner_smodal{position:fixed;left:50%;margin-left:-100px;top:-100px;width:200px;height:100px;background-color:pink;text-align:center;transition:top 0.5s ease-in-out;}
+		#modalWrap .top_to_bottom .inner_smodal{top:200px;}
+	</style>
 </head>
 <body>
-$END$
+
+	<div id="wrap">
+		<button type="button" id="modalBtn">경기알림</button>
+
+		<div style="background-color:red; width:100px; height:3000px;"></div>
+
+		<div id="modalWrap" >
+		<!--	<div class="modal_dimmed">
+
+				<div class="inner_modal">
+					<strong class="tit_merlin">안녕하세요 멀린 모달이예요 ~</strong>
+					<a href="javascript:;" class="btn_addModal">중첩 모달을 열어볼까요?</a>
+					<a href="javascript:;" class="btn_close">닫기</a>
+
+					<div class="modal_dimmed">
+						<div class="inner_smodal">as;dlfasdfasdf</div>
+					</div>
+				</div>
+
+			</div>-->
+		</div>
+
+	</div>
+	<script src="A.js"></script>
+
+	<script src="Modal.js"></script>
+
+	<script>
+
+
+    // 커스텀 modal setting 시작
+		var merlinModalSetting = {
+      template : '<div class="merlin_modal2 modal_dimmed"><div class="inner_smodal">멀린의 중첩모달 입니다. <a href="javascript:;" class="btn_close2">닫기</a></div></div>',
+      modalSelector : '.merlin_modal2',
+      closeBtnSelector : '.btn_close2',
+      tools : {
+        show : showFromTop,
+        remove : removeToTop
+      }
+    };
+    function showFromTop(selector){
+			var elem = A.tools.show(selector);
+
+			setTimeout(function(){
+        elem.classList.add('top_to_bottom');
+			},500);
+		}
+
+    function removeToTop(selector){
+      var element = selector;
+      if(typeof selector === 'string'){
+        element = document.querySelector(selector);
+      }
+			element.classList.remove('top_to_bottom');
+      setTimeout(function(){
+        var parent = element.parentElement;
+        parent.removeChild(element);
+      },500);
+    }
+
+    // 커스텀 modal setting 종료
+
+//// 범위를 줄여서 버튼을 찾자~
+		function secondModal(){
+
+      var secondBtn = document.querySelector('.btn_addModal');
+
+      secondBtn.addEventListener('click',function(){
+        var merlinModal2 = A('.inner_modal').modal(merlinModalSetting);
+				merlinModal2.show();
+			});
+		}
+
+/////////////
+    var btn = document.querySelector('#modalBtn');
+
+    btn.addEventListener('click',function(){
+
+      var merlinModal = A('#modalWrap').modal();
+
+      merlinModal.show(secondModal);
+    });
+
+
+	</script>
+
 </body>
 </html>
