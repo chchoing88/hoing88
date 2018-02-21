@@ -2,7 +2,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: ['babel-polyfill', 'react-hot-loader/patch', './src/index.js'],
 
   output: {
     path: __dirname + '/public/',
@@ -13,7 +13,7 @@ module.exports = {
     hot: true,
     inline: true,
     host: '0.0.0.0',
-    port: 7000,
+    port: 4000,
     contentBase: __dirname + '/public/',
   },
 
@@ -24,12 +24,13 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader : 'react-hot-loader'
-          },
-          {
-            loader : 'babel-loader',
-            options : {
-              presets: ['es2015','stage-0', 'react']
+            loader: 'babel-loader',
+            options: {
+              presets: ['es2015', 'stage-0', 'react'],
+              cacheDirectory: true,
+              plugins: [
+                'react-hot-loader/babel'
+              ]
             }
           }
         ]
@@ -38,6 +39,10 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
-  ]
+  ],
+  resolve: {
+    modules: ['node_modules']
+  }
 }

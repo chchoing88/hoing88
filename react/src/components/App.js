@@ -3,13 +3,20 @@ import Contact from './Contact';
 
 
 class App extends Component {
-  state = {
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+    };
   }
-
   render() {
     return (
-      <Contact />
+      <div>
+        <button onClick={() => { this.setState({ name: 'hoing' }); }} />
+        <h1>hello!! {this.state.name}</h1>
+        <Contact />
+      </div>
+
     );
   }
 }
