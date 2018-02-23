@@ -1,0 +1,70 @@
+version: '3.2'
+
+services:
+  app_blue:
+    image: blog_express:v1
+    depends_on:
+      - nginx-proxy
+      - mongo-db
+    working_dir: /app/
+    ports:
+      - 8888:3000
+    networks: 
+      - dbconnection
+    environment:
+      - VIRTUAL_HOST=nodeapp.local
+    volumes:
+      - type: bind
+        source: ./template
+        target: /app/template
+      - type: bind
+        source: ./server
+        target: /app/server
+    command: npm start
+  
+  app_green:
+    image: blog_express:v1
+    depends_on:
+      - nginx-proxy
+      - mongo-db
+    working_dir: /app/
+    networks: 
+      - dbconnection
+    environment:
+      - VIRTUAL_HOST=nodeapp.local
+    volumes:
+      - type: bind
+        source: ./template
+        target: /app/template
+      - type: bind
+        source: ./server
+        target: /app/server 
+    command: npm start
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - 8080:80
+    networks: 
+      - dbconnection
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+  
+  mongo-db:
+    image: mongo
+    ports:
+      - 9999:27017
+    volumes:
+      - db-data:/data/db
+    networks: 
+      - dbconnection
+    command: mongod --dbpath "/data/db" 
+    
+volumes:
+  db-data:
+
+networks: 
+  dbconnection:
+    
+
+
