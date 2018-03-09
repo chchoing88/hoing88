@@ -1,5 +1,5 @@
 import React from 'react';
-import update from 'react-addons-update';
+import update from 'react-addons-update'; // Immutability Hepler 를 사용하기 위해 배열을 update를 진행할때...
 import ContactInfo from './ContactInfo';
 import ContactDetails from './ContactDetails';
 import ContactCreate from './ContactCreate';
@@ -102,12 +102,15 @@ export default class Contact extends React.Component {
 
   render() {
     const mapToComponents = (data) => {
-      data.sort(); // 오름차순..
+      data.sort(); // 배열의 내용을 유니코드를 비교하여 오름차순..
+
+      // 필터 : 이름에 서치에 적어준게 포함되어있을때만 검색을 하고 싶다.
       const filterData = data.filter((contact) => {
         const result = contact.name.toLowerCase().indexOf(this.state.keyword) > -1;
         return result;
       });
-
+      // 걸러진 필터들을 보여주는 역활
+      // 이벤트는 컴포넌트엔 적용이 안되고 네이티브 돔에게만 적용이 된다.
       return filterData.map((contact, i) => {
         const result =
           <ContactInfo contact={contact} key={i} onClick={() => this.handleClick(i)} />;

@@ -9,6 +9,7 @@ class App extends Component {
       name: '',
     };
   }
+
   render() {
     return (
       <div>

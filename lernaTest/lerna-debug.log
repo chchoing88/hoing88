@@ -1,0 +1,16 @@
+0 silly input [ 'moduleA', 'add', 'moduleB' ]
+1 silly flags { _: [ 'add' ],
+1 silly flags   'reject-cycles': false,
+1 silly flags   rejectCycles: false,
+1 silly flags   args: [ 'moduleA', 'add', 'moduleB' ] }
+2 verbose rootPath /Users/merlin.ho/Documents/workspace/hoing88/lernaTest
+3 info version 2.9.0
+4 silly isInitialized
+5 silly isInitialized true
+6 silly existsSync /Users/merlin.ho/Documents/workspace/hoing88/lernaTest/VERSION
+7 info versioning independent
+8 silly initialize attempt
+9 error initialize callback with error
+10 error Error: Package `moduleA` doesn't exist
+10 error     at got.then.catch.err (/usr/local/lib/node_modules/lerna/node_modules/package-json/index.js:62:11)
+10 error     at <anonymous>
