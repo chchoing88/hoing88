@@ -6,6 +6,11 @@
 // 그 api 중에서 getRestaurantsWithinRadius를 사용하는데...이미 검색했던 내용들은 캐쉬해서 저장해놓고 싶다...
 // 그리고 해당 api 중에서 addGetRestaurantsNearConference 를 추가하는데 이 함수는 이미 정해진 주소와 반경을 가지고 있다...
 
+// 느낌이 .. api를 확장하는 느낌
+// 처음엔 api의 getRestaurantsWithinRadius 를 메모이제이션 패턴으로 확장을 하고 
+// 그 다음엔 다시 getRestaurantsWithinRadius 를 getRestaurantsNearConference로 랩을 씌운
+// 확장판 버젼의 api를 반환..
+
 
 // getRestaurantsWithinRadius에 메모이제이션 패턴 적용
 
@@ -17,7 +22,7 @@ Aop.around(
   function addMemoizationToGetRestaurantsWithinRadius(targetInfo) {
 
     // ThirdParty.restaurantApi()가 반환한 원본 API
-    var api =  Aop.next.call(this, targetInfo);
+    var api = Aop.next.call(this, targetInfo);
 
     // getRestaurantsWithinRadius 함수를 장식하여 메모이제이션 추가
     Aop.around('getRestaurantsWithinRadius',
@@ -42,7 +47,7 @@ Aop.around(
     'use strict';
 
     // ThirdParty.restaurantApi()가 반환한 원본 API
-    var api =  Aop.next.call(this,targetInfo);
+    var api = Aop.next.call(this, targetInfo);
 
     // API에 추가할 함수
     function getRestaurantsNearConference(cuisine) {
