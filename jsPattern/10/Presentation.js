@@ -15,6 +15,8 @@
 
 // 의존성 주입을 직접과 / 팩토리 주입형태로 이뤄질수 있다.
 // 요고에 대해서 알아보자..
+
+//
 var Conference = Conference || {};
 
 Conference.Presentation = function (title, presenter) {
