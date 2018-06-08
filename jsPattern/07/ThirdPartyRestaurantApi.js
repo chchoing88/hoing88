@@ -1,7 +1,7 @@
 /**
  * Created by merlin.ho on 2017. 6. 6..
  */
-
+// 7장. 부분 적용 함수 
 var ThirdParty = ThirdParty || {};
 
 ThirdParty.restaurantApi = function(){
