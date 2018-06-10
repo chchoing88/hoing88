@@ -8,7 +8,8 @@
       width: 50,
       height: 50,
       color: "red",
-      direction: DIRECTION.BOTTOM_RIGHT,
+      directionX: DIRECTION.RIGHT,
+      directionY: DIRECTION.BOTTOM,
       speed: 10,
     };
 
@@ -26,38 +27,61 @@
       _decreaseY: function(){ return this._opts.top-- },
       move: function() {
         var self = this;
-        var checkFrame = "";
-        var left = this._increaseX.bind(self);
-        var top = this._increaseY.bind(self);
+        var opts = self._opts;
+        var crashFrameDirectionX = "";
+        var crashFrameDirectionY = "";
+        
+        var left = (opts.directionX === DIRECTION.RIGHT)? this._increaseX.bind(self) :
+                    this._decreaseX.bind(self);
+        var top = (opts.directionY === DIRECTION.BOTTOM) ? this._increaseY.bind(self) : 
+                    this._decreaseY.bind(self);
+
         this._intervalId = setInterval(function() {
           
-          switch(checkFrame){
-            case DIRECTION.TOP : 
-              top = self._increaseY.bind(self);
-              break;
+          var leftValue = opts.left;
+          var topValue = opts.top;
+
+          crashFrameDirectionX = self._frame.checkX(leftValue, opts.width);
+          crashFrameDirectionY = self._frame.checkY(topValue, opts.height);
+          // console.log(crashFrameDirectionY);
+          
+          switch(crashFrameDirectionX){
             case DIRECTION.RIGHT : 
               left = self._decreaseX.bind(self);
+              opts.directionX = DIRECTION.LEFT;
               break;
-            case DIRECTION.BOTTOM :
-              top = self._decreaseY.bind(self);
-              break;
+           
             case DIRECTION.LEFT :
               left = self._increaseX.bind(self);
+              opts.directionX = DIRECTION.RIGHT;
               break;
             default :
               left = left;
+              
+          }
+
+          switch(crashFrameDirectionY){
+            case DIRECTION.TOP : 
+              top = self._increaseY.bind(self);
+              opts.directionY = DIRECTION.BOTTOM;
+              break;
+           
+            case DIRECTION.BOTTOM :
+              top = self._decreaseY.bind(self);
+              opts.directionY = DIRECTION.TOP;
+              break;
+            
+            default :
               top = top;
           }
           
-          var leftValue = left();
-          var topValue = top();
+          leftValue = left();
+          topValue = top();
           self._dom.style.left = leftValue + "px";
           self._dom.style.top = topValue + "px";
 
-          checkFrame = self._frame.check(leftValue, topValue, self._opts.width, self._opts.height);
-          console.log(checkFrame);
-
-        },this._opts.speed);
+        
+        },opts.speed);
       },
       render: function() {
         var style = {
@@ -78,7 +102,9 @@
         this._dom.remove();
       },
       divide: function() {
-        
+        // width , height 를 반으로 나눈뒤.
+        // 같은 걸 3개 인스턴스를 만든뒤.
+        // 4개를 moveTo 해서 움직인다..
       },
       stop: function(){
         if(this._intervalId){

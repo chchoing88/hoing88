@@ -8,18 +8,23 @@
       top: 0,
       right: 500,
       bottom: 400,
-      check: function(left, top, width, height){
-        var bottom = top + height;
+      checkX: function(left, width){
         var right = left + width; 
 
-        if( this.top === top ){
-          return DIRECTION.TOP;
-        }else if( this.right === right){
+        if( this.right === right){
           return DIRECTION.RIGHT;
-        }else if( this.bottom === bottom ){
-          return DIRECTION.BOTTOM;
         }else if( this.left === left ){
           return DIRECTION.LEFT;
+        }
+        
+        return "";
+      },
+      checkY: function(top, height){
+        var bottom = top + height;
+        if( this.top === top ){
+          return DIRECTION.TOP;
+        }else if( this.bottom === bottom ){
+          return DIRECTION.BOTTOM;
         }
         
         return "";
