@@ -1,0 +1,47 @@
+<html>
+
+<head>
+	<title>Parcel Sandbox</title>
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+	<style>
+		#box_frame{
+			position:relative;
+			width:500px;
+			height:400px;
+			border:1px solid black;
+			box-sizing: border-box;
+		}
+		.wrap_btn{
+			margin-top:10px;
+		}
+		.box{
+			position:absolute;
+			/* width:100px;
+			height:100px;
+			background-color:red; */
+		}
+	</style>
+	<div id="app">
+		<div id="box_frame"></div>
+		<div class="wrap_btn">
+			<button id="btn_start">시작</button>
+			<button id="btn_divide">분할</button>
+			<button id="btn_toggle">중지/재시작</button>
+			<button id="btn_delete">삭제</button>
+		</div>
+
+	</div>
+
+	<script src="src/util.js"></script>
+	<script src="src/direction.js"></script>
+	<script src="src/box.js"></script>
+	<script src="src/frame.js"></script>
+	<script src="src/boxApp.js"></script>
+	<script src="src/index.js"></script>
+	
+</body>
+
+</html>
