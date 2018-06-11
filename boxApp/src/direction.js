@@ -1,6 +1,6 @@
 "use strict";
 
-(function(g) {
+(function (g) {
   g.DIRECTION = {
     TOP_LEFT: "topLeft",
     BOTTOM_LEFT: "bottomLeft",
