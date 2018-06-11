@@ -119,7 +119,7 @@
         this._dom = document.createElement("div");
         Object.assign(this._dom.style, style);
         this._dom.className = "box";
-        console.log("a");
+
 
         this._frame.target.appendChild(this._dom);
       },

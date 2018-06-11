@@ -6,8 +6,8 @@
       target: elem,
       left: 0,
       top: 0,
-      right: 500,
-      bottom: 400,
+      right: elem.offsetWidth,
+      bottom: elem.offsetHeight,
       checkX: function (left, width) {
         var right = left + width;
 

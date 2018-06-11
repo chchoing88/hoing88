@@ -24,6 +24,9 @@
       }
 
       return result;
+    },
+    assign: function () {  // deep copy
+
     }
   };
 })(window);
