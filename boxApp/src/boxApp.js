@@ -1,14 +1,14 @@
 "use strict";
 
 (function (g) {
-  g.boxAppGenerator = function (Box, frame) {
+  g.boxAppGenerator = function (opts) {
     var _ = g.util;
     var _boxes = [];
-    var _Box = Box;
-    var _frame = frame;
+    var _Box = opts.Box || {};
+    var _frame = opts.frame || {};
     var _isStop = true;
-    var _diviedCount = 0;
-    var _MAX_DIVIED = 4;
+    var _divideCount = 0;
+    var _MAX_DIVIDE = opts.maxDivide || 4;
 
     var boxApp = {
       _initProps: {},
@@ -28,16 +28,16 @@
         _boxes.push(box);
       },
       divide: function () {
-        if (_diviedCount < _MAX_DIVIED) {
-          var diviedBoxes = [];
+        if (_divideCount < _MAX_DIVIDE) {
+          var divideBoxes = [];
           _boxes.forEach(function (box) {
 
-            diviedBoxes = _.concat(diviedBoxes, box.divide());
+            divideBoxes = _.concat(divideBoxes, box.divide());
 
           });
-          _boxes = diviedBoxes;
+          _boxes = divideBoxes;
 
-          _diviedCount++;
+          _divideCount++;
         }
 
       },
@@ -49,7 +49,7 @@
         });
 
         _boxes = [];
-        _diviedCount = 0;
+        _divideCount = 0;
         _isStop = true;
         this.init(this._initProps);
       },

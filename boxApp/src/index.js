@@ -8,9 +8,22 @@
   var btnDivide = _.$("#btn_divide");
 
   var frame = Frame(frameElem);
-  var boxApp = boxAppGenerator(Box, frame);
+  var boxApp = boxAppGenerator({
+    Box: Box,
+    frame: frame,
+    maxDivide: 4
+  });
 
-  boxApp.init();
+  boxApp.init({
+    left: 0,
+    top: 0,
+    width: 50,
+    height: 50,
+    color: "",
+    directionX: DIRECTION.RIGHT,
+    directionY: DIRECTION.BOTTOM,
+    speed: 10,
+  });
 
   btnStart.addEventListener("click", function () {
     boxApp.move();
