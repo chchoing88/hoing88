@@ -2,6 +2,7 @@
 
 (function (g) {
   g.Box = (function () {
+    var _ = g.util;
     var defaultProps = {
       left: 0,
       top: 0,
@@ -33,7 +34,8 @@
     ]
 
     function Box(frame, props) {
-      this._opts = Object.assign({}, defaultProps, props);
+      // this._opts = Object.assign({}, defaultProps, props);
+      this._opts = _.assign({}, defaultProps, props);
       this._frame = frame;
       this._dom = null;
       this._intervalId = 0;
@@ -117,7 +119,8 @@
           backgroundColor: this._opts.color
         };
         this._dom = document.createElement("div");
-        Object.assign(this._dom.style, style);
+        // Object.assign(this._dom.style, style);
+        _.assign(this._dom.style, style);
         this._dom.className = "box";
 
 
@@ -136,12 +139,14 @@
         // 같은 걸 3개 인스턴스를 만든뒤.
         for (i = 4; i > 0; i--) {
           if (i === 4) {
-            Object.assign(this._opts, diviedDirection[0]);
+            // Object.assign(this._opts, diviedDirection[0]);
+            _.assign(this._opts, diviedDirection[0]);
             diviedBoxes.push(this);
             this.move();
             continue;
           }
-          Object.assign(this._opts, diviedDirection[i])
+          // Object.assign(this._opts, diviedDirection[i])
+          _.assign(this._opts, diviedDirection[i]);
           diviedBoxes[i] = new Box(this._frame, this._opts);
           diviedBoxes[i].render();
           diviedBoxes[i].move();

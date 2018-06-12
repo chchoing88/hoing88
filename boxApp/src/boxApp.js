@@ -2,7 +2,7 @@
 
 (function (g) {
   g.boxAppGenerator = function (Box, frame) {
-
+    var _ = g.util;
     var _boxes = [];
     var _Box = Box;
     var _frame = frame;
@@ -32,7 +32,7 @@
           var diviedBoxes = [];
           _boxes.forEach(function (box) {
 
-            diviedBoxes = g.util.concat(diviedBoxes, box.divide());
+            diviedBoxes = _.concat(diviedBoxes, box.divide());
 
           });
           _boxes = diviedBoxes;
