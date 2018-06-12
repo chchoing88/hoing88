@@ -14,7 +14,7 @@
       speed: 10,
     };
 
-    var diviedDirection = [
+    var divideDirection = [
       {
         directionX: DIRECTION.RIGHT,
         directionY: DIRECTION.TOP
@@ -46,7 +46,7 @@
       _decreaseX: function () { return this._opts.left-- },
       _increaseY: function () { return this._opts.top++ },
       _decreaseY: function () { return this._opts.top-- },
-      _diviedWidth: function () {
+      _divideWidth: function () {
         this._opts.width = Math.floor(this._opts.width / 2);
         this._opts.height = Math.floor(this._opts.height / 2);
         this._dom.style.width = this._opts.width + "px";
@@ -135,18 +135,18 @@
         // 일단 스탑
         this.stop();
         // width , height 를 반으로 나눈뒤.
-        this._diviedWidth();
+        this._divideWidth();
         // 같은 걸 3개 인스턴스를 만든뒤.
         for (i = 4; i > 0; i--) {
           if (i === 4) {
             // Object.assign(this._opts, diviedDirection[0]);
-            _.assign(this._opts, diviedDirection[0]);
+            _.assign(this._opts, divideDirection[0]);
             diviedBoxes.push(this);
             this.move();
             continue;
           }
           // Object.assign(this._opts, diviedDirection[i])
-          _.assign(this._opts, diviedDirection[i]);
+          _.assign(this._opts, divideDirection[i]);
           diviedBoxes[i] = new Box(this._frame, this._opts);
           diviedBoxes[i].render();
           diviedBoxes[i].move();
