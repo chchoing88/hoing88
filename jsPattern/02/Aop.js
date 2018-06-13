@@ -1,21 +1,31 @@
-/**
- * Created by merlin.ho on 2017. 5. 11..
- */
-
 Aop = {
-  around: function(fnName,advice,fnObj){
+  around: function(fnName, advice, fnObj) {
     var originalFn = fnObj[fnName];
-    fnObj[fnName] = function(){
-      var targetContext = {};
-      return advice.call(this, {fn:originalFn,args:arguments});
+    fnObj[fnName] = function () {
+      return advice.call(this, {fn:originalFn, args:arguments});
     };
-
-
-
-    //fnObj[fnName] = advice;
   },
-  next: function(targetInfo){
-   // targetInfo.fn();
+
+  next: function(targetInfo) {
     return targetInfo.fn.apply(this,targetInfo.args);
   }
+};
+
+Aop.before = function(fnName, advice, fnObj) {
+  Aop.around(fnName,
+    function(targetInfo) {
+      advice.apply(this,targetInfo.args);
+      return Aop.next(targetInfo);
+    },
+    fnObj);
+};
+
+Aop.after = function(fnName, advice, fnObj) {
+  Aop.around(fnName,
+     function(targetInfo) {
+       var ret = Aop.next(targetInfo);
+       advice.apply(this, targetInfo.args);
+       return ret;
+     },
+     fnObj);
 };
