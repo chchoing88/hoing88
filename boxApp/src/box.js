@@ -32,7 +32,13 @@
         directionY: DIRECTION.BOTTOM
       }
     ]
-
+    /**
+     * Box class
+     * @param {object} frame frame object
+     * @param {object} props related box options 
+     * @return {object} return box object
+     * @see see detailed props param README.md
+     */
     function Box(frame, props) {
       // this._opts = Object.assign({}, defaultProps, props);
       this._opts = _.assign({}, defaultProps, props);
@@ -52,6 +58,9 @@
         this._dom.style.width = this._opts.width + "px";
         this._dom.style.height = this._opts.height + "px";
       },
+      /**
+       * Move box
+       */
       move: function () {
         var self = this;
         var opts = self._opts;
@@ -110,6 +119,9 @@
 
         }, opts.speed);
       },
+      /**
+       * box dom render
+       */
       render: function () {
         var style = {
           left: this._opts.left + "px",
@@ -126,9 +138,15 @@
 
         this._frame.target.appendChild(this._dom);
       },
+      /**
+       * box dom delete
+       */
       delete: function () {
         this._dom.remove();
       },
+      /**
+       * box dom divide
+       */
       divide: function () {
         var i = 0;
         var diviedBoxes = [];
@@ -155,11 +173,17 @@
 
         return diviedBoxes;
       },
+      /**
+       * box move stop
+       */
       stop: function () {
         if (this._intervalId) {
           clearInterval(this._intervalId)
         }
       },
+      /**
+       * box move restart
+       */
       restart: function () {
         this.move();
       },

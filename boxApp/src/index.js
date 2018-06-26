@@ -19,10 +19,10 @@
     top: 0,
     width: 50,
     height: 50,
-    color: "",
+    color: "black",
     directionX: DIRECTION.RIGHT,
     directionY: DIRECTION.BOTTOM,
-    speed: 10,
+    speed: 5,
   });
 
   btnStart.addEventListener("click", function () {
@@ -38,5 +38,6 @@
     boxApp.divide();
 
   })
+
 
 })(window.util);
