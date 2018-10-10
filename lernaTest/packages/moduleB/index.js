@@ -1,1 +1,1 @@
-console.log('this is moduleB')
+console.log('this is moduleB version 0.1.3 update')
