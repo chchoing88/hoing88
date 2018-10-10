@@ -3,12 +3,12 @@
  */
 
 import b from './b';
-import {c,wtf} from './c';
+import { c, wtf } from './c';
 
 
 console.log('a');
 
-b();
+b.aaa();
 
 c();
 

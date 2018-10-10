@@ -36,12 +36,32 @@
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
 /******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -59,64 +79,58 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ "./src/a.js":
+/*!******************!*\
+  !*** ./src/a.js ***!
+  \******************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(1);
-
+"use strict";
+eval("\n\nvar _b = __webpack_require__(/*! ./b */ \"./src/b.js\");\n\nvar _b2 = _interopRequireDefault(_b);\n\nvar _c = __webpack_require__(/*! ./c */ \"./src/c.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n/**\n * Created by merlin.ho on 2017. 5. 31..\n */\n\nconsole.log('a');\n\n_b2.default.aaa();\n\n(0, _c.c)();\n\nconsole.log(_c.wtf);\n\n//# sourceURL=webpack:///./src/a.js?");
 
 /***/ }),
-/* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+/***/ "./src/b.js":
+/*!******************!*\
+  !*** ./src/b.js ***!
+  \******************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__b__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__c__ = __webpack_require__(3);
-/**
- * Created by merlin.ho on 2017. 5. 31..
- */
-
-
-
-
-
-console.log('a');
-
-Object(__WEBPACK_IMPORTED_MODULE_0__b__["a" /* default */])();
-
-Object(__WEBPACK_IMPORTED_MODULE_1__c__["a" /* c */])();
-
-console.log(__WEBPACK_IMPORTED_MODULE_1__c__["b" /* wtf */]);
+eval("\n\n/**\n * Created by merlin.ho on 2017. 5. 31..\n */\nmodule.exports.aaa = function () {\n  console.log('b');\n};\n\n//# sourceURL=webpack:///./src/b.js?");
 
 /***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+/***/ "./src/c.js":
+/*!******************!*\
+  !*** ./src/c.js ***!
+  \******************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/**
- * Created by merlin.ho on 2017. 5. 31..
- */
-/* harmony default export */ __webpack_exports__["a"] = (function(){console.log('b');});
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.c = c;\nfunction c() {\n    console.log('c');\n}\nvar wtf = 'wtf';\nexports.wtf = wtf;\n\n//# sourceURL=webpack:///./src/c.js?");
 
 /***/ }),
-/* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = c;
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return wtf; });
-function c(){
-    console.log('c');
-}
-const wtf = 'wtf';
+/***/ 0:
+/*!************************!*\
+  !*** multi ./src/a.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-
+eval("module.exports = __webpack_require__(/*! ./src/a.js */\"./src/a.js\");\n\n\n//# sourceURL=webpack:///multi_./src/a.js?");
 
 /***/ })
-/******/ ]);
+
+/******/ });
