@@ -1,16 +1,11 @@
-0 silly input [ 'moduleA', 'add', 'moduleB' ]
-1 silly flags { _: [ 'add' ],
-1 silly flags   'reject-cycles': false,
-1 silly flags   rejectCycles: false,
-1 silly flags   args: [ 'moduleA', 'add', 'moduleB' ] }
+0 silly argv { _: [ 'add' ],
+0 silly argv   scope: 'moduleA',
+0 silly argv   globs: [],
+0 silly argv   lernaVersion: '3.4.2',
+0 silly argv   '$0': '/usr/local/bin/lerna',
+0 silly argv   pkg: 'moduleB' }
+1 notice cli v3.4.2
 2 verbose rootPath /Users/merlin.ho/Documents/workspace/hoing88/lernaTest
-3 info version 2.9.0
-4 silly isInitialized
-5 silly isInitialized true
-6 silly existsSync /Users/merlin.ho/Documents/workspace/hoing88/lernaTest/VERSION
-7 info versioning independent
-8 silly initialize attempt
-9 error initialize callback with error
-10 error Error: Package `moduleA` doesn't exist
-10 error     at got.then.catch.err (/usr/local/lib/node_modules/lerna/node_modules/package-json/index.js:62:11)
-10 error     at <anonymous>
+3 info versioning independent
+4 error Error: 404 Not Found - GET http://npm.ftdev.daum.net/moduleB - no such package available
+4 error     at res.buffer.catch.then.body (/Users/merlin.ho/Documents/workspace/hoing88/lernaTest/node_modules/npm-registry-fetch/check-response.js:104:15)
