@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "moduleb": "^1.0.3"
+    "moduleb": "^1.0.3",
+    "sillyname": "0.0.3"
   }
 }

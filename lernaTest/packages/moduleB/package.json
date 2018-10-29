@@ -1,6 +1,6 @@
 {
   "name": "moduleb",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,5 +8,7 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "sillyname": "0.0.3"
+  }
 }
